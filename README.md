@@ -26,6 +26,7 @@ You will need the following software properly installed on your computer.
 * `cd meal-tracker`
 * `npm install`
 * `bower install`
+* place the api-keys.ts file provided to you by the author in the meal-tracker/src/app folder
 
 ## Development server
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
