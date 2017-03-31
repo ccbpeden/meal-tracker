@@ -1,15 +1,4 @@
-<div class="container">
   <div class="well title">
     <h1>{{title}}</h1>
   </div>
   <router-outlet></router-outlet>
-  <div class="row">
-    <div class="col-md-6">
-      <meal-detail [childMealList]='parentMeals' (selectClicker)=selectMeal($event)>...Loading</meal-detail>
-      <edit-meal [selectedMeal]='parentSelectedMeal' (doneClicker)=closeEditForm($event)>...Loading</edit-meal>
-    </div>
-    <div class="col-md-6">
-      <new-meal [newMealForm]='parentNewMealForm' (addClicker)='addMeal($event)'  (showClicker)='showNewMealForm($event)'>...Loading</new-meal>
-    </div>
-  </div>
-</div>
