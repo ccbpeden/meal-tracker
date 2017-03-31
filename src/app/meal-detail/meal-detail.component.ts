@@ -26,7 +26,7 @@ export class MealDetailComponent {
     if (meal.calories <= 500) {
       return "bg-success";
     } else if (meal.calories > 500) {
-      return "bg-warning";
+      return "bg-danger";
     }
   }
 }

@@ -1,23 +1,30 @@
-<p>
-  meal-detail works!
-</p>
 <div class="meal-detail">
+  <div class="middle">
+    <h2>Meals Tracked</h2>
+    <h4>Select A Subset</h4>
+    <select (change)="onChange($event.target.value)">
+      <option value="allMeals" selected="selected">All Meals</option>
+      <option value="highCalorieMeals">High Calorie Meals</option>
+      <option value="lowCalorieMeals">Low Calorie Meals</option>
+    </select><br>
+  </div>
 
-  <select (change)="onChange($event.target.value)">
-    <option value="allMeals" selected="selected">All Meals</option>
-    <option value="highCalorieMeals">High Calorie Meals</option>
-    <option value="lowCalorieMeals">Low Calorie Meals</option>
-  </select>
-
-  <h2>Meals Tracked</h2>
   <ul>
-    <li *ngFor="let meal of childMealList | caloricity:filterByCaloricity">{{meal.name}}
-      <ul>
-        <li>{{meal.details}}</li>
-        <li>{{meal.calories}}</li>
-        <li>{{meal.dateTime}}</li>
-      </ul>
-      <button class="btn btn-warning" (click)=selectMeal(meal)>Edit this</button>
-    </li>
+    <div *ngFor="let meal of childMealList | caloricity:filterByCaloricity" class="well">
+      <div class="row">
+        <div class="col-md-8">
+          <li >{{meal.name}}
+            <ul>
+              <li>{{meal.details}}</li>
+              <li [class]="fatty(meal)">Calories: {{meal.calories}}</li>
+              <li>{{meal.dateTime}}</li>
+            </ul>
+          </li>
+        </div>
+        <div class="col-md-4 middle">
+          <button class="btn btn-warning button" (click)=selectMeal(meal)>Edit this</button>
+        </div>
+      </div>
+    </div>
   </ul>
 </div>

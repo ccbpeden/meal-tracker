@@ -18,11 +18,15 @@ export class NewMealComponent {
   }
 
   addMeal(name, details, calories){
-    var params = {
-      "name": name,
-      "details": details,
-      "calories": calories
+    if(name !== '' && details !== '' && calories !== ''){
+      var params = {
+        "name": name,
+        "details": details,
+        "calories": calories
+      }
+      this.addClicker.emit(params);
+    } else {
+      alert("Please fill all fields before submitting!");
     }
-    this.addClicker.emit(params);
   }
 }

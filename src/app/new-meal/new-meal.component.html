@@ -1,15 +1,12 @@
-<p>
-  new-meal works!
-</p>
 <div class="new-meal">
   <button class="btn btn-success" (click)="showNewMealForm()">Add A Meal</button>
-  <div *ngIf='newMealForm'>
+  <div class="well" *ngIf='newMealForm'>
     <label for="name">Name</label>
-    <input #name><br>
+    <input class="form-control" required #name><br>
     <label for="details">Details</label>
-    <input #details><br>
+    <input class="form-control" required #details><br>
     <label for="calories">Caloric Value</label>
-    <input #calories><br>
+    <input type="number" class="form-control" required #calories><br>
     <button class="btn btn-warning"(click)="addMeal(name.value, details.value, calories.value)">Burp!</button>
   </div>
 </div>

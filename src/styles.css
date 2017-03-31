@@ -1,1 +1,15 @@
-/* You can add global styles to this file, and also import other style files */
+.middle{
+  text-align: center;
+}
+
+.button{
+  margin-top: 2em;
+}
+
+.title{
+  font-family: 'Amatic SC', cursive;
+}
+
+.container {
+  font-family: 'Josefin Slab', serif;
+}
