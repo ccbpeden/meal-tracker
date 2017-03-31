@@ -9,6 +9,7 @@ import { Meal } from './meal.model';
 export class AppComponent {
   title = 'A Meal Tracker!';
   newMealForm = false;
+  selectedMeal = null;
   parentMeals: Meal[] = [
     new Meal('Breakfast', '2 bowls Quinoa & Dates', 476),
     new Meal('Elevenses', 'icecream, cheetos, and fudge', 1325),
@@ -19,8 +20,18 @@ export class AppComponent {
     this.newMealForm = true;
     console.log(this.newMealForm);
   }
+
   addMeal(name, details, calories){
     var newMeal = new Meal(name, details, calories);
     this.parentMeals.push(newMeal);
+    this.newMealForm = false;
+  }
+
+  selectMeal(meal){
+    this.selectedMeal = meal;
+  }
+
+  closeEditForm(){
+    this.selectedMeal = null;
   }
 }

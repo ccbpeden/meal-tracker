@@ -13,10 +13,11 @@
               <li>{{meal.calories}}</li>
               <li>{{meal.dateTime}}</li>
             </ul>
+            <button class="btn btn-warning" (click)=selectMeal(meal)>Edit this</button>
           </li>
         </ul>
       </div>
-      <div class="new-meal-form">
+      <div class="new-meal">
         <button class="btn btn-success" (click)="showNewMealForm()">Add A Meal</button>
         <div *ngIf='newMealForm'>
           <label for="name">Name</label>
@@ -26,6 +27,17 @@
           <label for="calories">Caloric Value</label>
           <input #calories><br>
           <button class="btn btn-warning"(click)="addMeal(name.value, details.value, calories.value)">Burp!</button>
+        </div>
+      </div>
+      <div class="edit-meal">
+        <div *ngIf='selectedMeal'>
+          <label for="name">Name</label>
+          <input [(ngModel)]="selectedMeal.name"><br>
+          <label for="details">Details</label>
+          <input [(ngModel)]="selectedMeal.details"><br>
+          <label for="calories">Caloric Value</label>
+          <input [(ngModel)]="selectedMeal.calories"><br>
+          <button class="btn btn-warning"(click)="closeEditForm()">Fixed It!</button>
         </div>
       </div>
     </div>
