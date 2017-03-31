@@ -7,6 +7,6 @@
     <input class="form-control" required #details><br>
     <label for="calories">Caloric Value</label>
     <input type="number" class="form-control" required #calories><br>
-    <button class="btn btn-warning"(click)="addMeal(name.value, details.value, calories.value)">Burp!</button>
+    <button class="btn btn-warning"(click)="addMeal(name.value, details.value, calories.value); name.value=''; details.value=''; calories.value=''">Burp!</button>
   </div>
 </div>

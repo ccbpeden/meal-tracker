@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Meal } from '../meal.model';
 import { MealService } from '../meal.service';
+import { AngularFire, FirebaseListObservable } from 'angularfire2';
 
 
 @Component({
@@ -13,7 +14,7 @@ import { MealService } from '../meal.service';
 export class WelcomeComponent implements OnInit {
   parentSelectedMeal = null;
   parentNewMealForm = false;
-  parentMeals: Meal[];
+  parentMeals: FirebaseListObservable<any[]>;
 
   constructor(private mealService: MealService) {}
 

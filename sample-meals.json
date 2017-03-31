@@ -1,0 +1,20 @@
+{ "meals": [{
+    "title": "Breakfast",
+    "details": "2 bowls Quinoa & Dates",
+    "calories": 476,
+    "dateTime": "2017/3/31",
+    "id": "1"
+  }, {
+    "title": "Elevenses",
+    "details": "icecream, cheetos, and fudge",
+    "calories": 1325,
+    "dateTime": "2017/3/31",
+    "id": "2"
+  }, {
+    "title": "Lunch",
+    "details": "asparagus, toast, lox",
+    "calories": 563,
+    "dateTime": "2017/3/31",
+    "id": "3"
+  }]
+}

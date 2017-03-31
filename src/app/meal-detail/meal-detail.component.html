@@ -10,7 +10,7 @@
   </div>
 
   <ul>
-    <div *ngFor="let meal of childMealList | caloricity:filterByCaloricity" class="well">
+    <div *ngFor="let meal of childMealList | async | caloricity:filterByCaloricity" class="well">
       <div class="row">
         <div class="col-md-8">
           <li >{{meal.name}}
