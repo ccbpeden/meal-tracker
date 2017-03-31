@@ -1,19 +1,25 @@
 import { Component, OnInit } from '@angular/core';
 import { Meal } from '../meal.model';
+import { MealService } from '../meal.service';
+
 
 @Component({
   selector: 'app-welcome',
   templateUrl: './welcome.component.html',
-  styleUrls: ['./welcome.component.css']
+  styleUrls: ['./welcome.component.css'],
+  providers: [MealService]
 })
-export class WelcomeComponent {
+
+export class WelcomeComponent implements OnInit {
   parentSelectedMeal = null;
   parentNewMealForm = false;
-  parentMeals: Meal[] = [
-    new Meal('Breakfast', '2 bowls Quinoa & Dates', 476),
-    new Meal('Elevenses', 'icecream, cheetos, and fudge', 1325),
-    new Meal('Lunch', 'asparagus, toast, lox', 563)
-  ]
+  parentMeals: Meal[];
+
+  constructor(private mealService: MealService) {}
+
+  ngOnInit(){
+    this.parentMeals = this.mealService.getMeals();
+  }
 
   addMeal(params){
     var newMeal = new Meal(params.name, params.details, params.calories);
@@ -32,4 +38,5 @@ export class WelcomeComponent {
   closeEditForm(){
     this.parentSelectedMeal = null;
   }
+
 }
