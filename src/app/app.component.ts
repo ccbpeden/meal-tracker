@@ -10,6 +10,7 @@ export class AppComponent {
   title = 'A Meal Tracker!';
   newMealForm = false;
   selectedMeal = null;
+  filterByCaloricity:string = "allMeals";
   parentMeals: Meal[] = [
     new Meal('Breakfast', '2 bowls Quinoa & Dates', 476),
     new Meal('Elevenses', 'icecream, cheetos, and fudge', 1325),
@@ -33,5 +34,9 @@ export class AppComponent {
 
   closeEditForm(){
     this.selectedMeal = null;
+  }
+
+  onChange(optionFromMenu) {
+    this.filterByCaloricity = optionFromMenu;
   }
 }

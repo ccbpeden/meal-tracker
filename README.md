@@ -50,7 +50,8 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 4. Lay out root component with all functionality therein
 5. Implement functionality for user stories, 1 at a time.
 6. Refactor root into previously identified components
-7. Implement Stretch Goals
+7. Style Pages
+8. Implement Stretch Goals
 
 
 ## User Stories
@@ -58,7 +59,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 As a user, I want to view a list of foods I have logged.
 As a user, I want to log a food I have eaten by submitting a form with food name, calories and details.
 As a user, I want to click a food to edit its name, details or calories (in case As a user, I decide to pretend my fries were 100 calories instead of 365).
-As a user, I want options to view all foods, only high-calorie foods (more than 500 calories), or only lower-calorie foods (less than 500 calories).
+As a user, I want options to view all meals, only high-calorie meals (more than 500 calories), or only lower-calorie foods (less than 500 calories).
 
 Stretch User Stories:
 As a user, I want to be able to view the total number of calories consumed in a day, and/or the average number of calories consumed in a day.
