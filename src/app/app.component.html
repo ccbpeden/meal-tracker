@@ -1,13 +1,33 @@
-<h1>
-  {{title}}
-</h1>
-<h2>Meals Tracked</h2>
-<ul>
-  <li *ngFor="let meal of parentMeals">{{meal.name}}
-    <ul>
-      <li>{{meal.details}}</li>
-      <li>{{meal.calories}}</li>
-      <li>{{meal.dateTime}}</li>
-    </ul>
-  </li>
-  
+<div class="container">
+  <h1>
+    {{title}}
+  </h1>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="meal-detail">
+        <h2>Meals Tracked</h2>
+        <ul>
+          <li *ngFor="let meal of parentMeals">{{meal.name}}
+            <ul>
+              <li>{{meal.details}}</li>
+              <li>{{meal.calories}}</li>
+              <li>{{meal.dateTime}}</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="new-meal-form">
+        <button class="btn btn-success" (click)="showNewMealForm()">Add A Meal</button>
+        <div *ngIf='newMealForm'>
+          <label for="name">Name</label>
+          <input #name><br>
+          <label for="details">Details</label>
+          <input #details><br>
+          <label for="calories">Caloric Value</label>
+          <input #calories><br>
+          <button class="btn btn-warning"(click)="addMeal(name.value, details.value, calories.value)">Burp!</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
