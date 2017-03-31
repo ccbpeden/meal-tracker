@@ -85,6 +85,7 @@ Components:
 #Stretch Goals
 1. Use Moment for date/time stamp
 2. Style with SASS
+3. Implement FireBase
 
 ## Copyright (c)
 * 2017 Charles Peden
