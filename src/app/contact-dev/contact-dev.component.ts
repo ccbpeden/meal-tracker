@@ -5,11 +5,8 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './contact-dev.component.html',
   styleUrls: ['./contact-dev.component.css']
 })
-export class ContactDevComponent implements OnInit {
+export class ContactDevComponent {
 
-  constructor() { }
 
-  ngOnInit() {
-  }
 
 }

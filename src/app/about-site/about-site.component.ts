@@ -6,11 +6,6 @@ import { AppComponent } from '../app.component';
   templateUrl: './about-site.component.html',
   styleUrls: ['./about-site.component.css']
 })
-export class AboutSiteComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-  }
+export class AboutSiteComponent {
 
 }

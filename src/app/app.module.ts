@@ -8,6 +8,10 @@ import { CaloricityPipe } from './caloricity.pipe';
 import { MealDetailComponent } from './meal-detail/meal-detail.component';
 import { NewMealComponent } from './new-meal/new-meal.component';
 import { EditMealComponent } from './edit-meal/edit-meal.component';
+import { WelcomeComponent } from './welcome/welcome.component';
+import { ContactDevComponent } from './contact-dev/contact-dev.component';
+import { AboutSiteComponent } from './about-site/about-site.component';
+import { routing } from './app.routing';
 
 @NgModule({
   declarations: [
@@ -15,12 +19,16 @@ import { EditMealComponent } from './edit-meal/edit-meal.component';
     CaloricityPipe,
     MealDetailComponent,
     NewMealComponent,
-    EditMealComponent
+    EditMealComponent,
+    WelcomeComponent,
+    ContactDevComponent,
+    AboutSiteComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    routing
   ],
   providers: [],
   bootstrap: [AppComponent]
