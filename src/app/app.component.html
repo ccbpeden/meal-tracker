@@ -6,17 +6,7 @@
     <div class="col-md-6">
       <meal-detail [childMealList]='parentMeals' (selectClicker)=selectMeal($event)>...Loading</meal-detail>
       <new-meal [newMealForm]='parentNewMealForm' (addClicker)='addMeal($event)'  (showClicker)='showNewMealForm($event)'>...Loading</new-meal>
-      <div class="edit-meal">
-        <div *ngIf='selectedMeal'>
-          <label for="name">Name</label>
-          <input [(ngModel)]="selectedMeal.name"><br>
-          <label for="details">Details</label>
-          <input [(ngModel)]="selectedMeal.details"><br>
-          <label for="calories">Caloric Value</label>
-          <input [(ngModel)]="selectedMeal.calories"><br>
-          <button class="btn btn-warning"(click)="closeEditForm()">Fixed It!</button>
-        </div>
-      </div>
+      <edit-meal [selectedMeal]='parentSelectedMeal' (doneClicker)=closeEditForm($event)>...Loading</edit-meal>
     </div>
     <div class="col-md-6">
     </div>

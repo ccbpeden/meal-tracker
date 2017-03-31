@@ -1,0 +1,14 @@
+<p>
+  edit-meal works!
+</p>
+<div class="edit-meal">
+  <div *ngIf='selectedMeal'>
+    <label for="name">Name</label>
+    <input [(ngModel)]="selectedMeal.name"><br>
+    <label for="details">Details</label>
+    <input [(ngModel)]="selectedMeal.details"><br>
+    <label for="calories">Caloric Value</label>
+    <input [(ngModel)]="selectedMeal.calories"><br>
+    <button class="btn btn-warning"(click)="closeEditForm()">Fixed It!</button>
+  </div>
+</div>

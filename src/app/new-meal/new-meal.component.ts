@@ -14,9 +14,7 @@ export class NewMealComponent {
   @Input() newMealForm;
 
   showNewMealForm(){
-    console.log(this.newMealForm);
     this.showClicker.emit();
-    console.log(this.newMealForm);
   }
 
   addMeal(name, details, calories){
