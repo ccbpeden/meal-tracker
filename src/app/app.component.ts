@@ -8,24 +8,23 @@ import { Meal } from './meal.model';
 })
 export class AppComponent {
   title = 'A Meal Tracker!';
-  newMealForm = false;
   selectedMeal = null;
-  filterByCaloricity:string = "allMeals";
+  parentNewMealForm = false;
   parentMeals: Meal[] = [
     new Meal('Breakfast', '2 bowls Quinoa & Dates', 476),
     new Meal('Elevenses', 'icecream, cheetos, and fudge', 1325),
     new Meal('Lunch', 'asparagus, toast, lox', 563)
   ]
 
-  showNewMealForm(){
-    this.newMealForm = true;
-    console.log(this.newMealForm);
+  addMeal(params){
+    var newMeal = new Meal(params.name, params.details, params.calories);
+    this.parentMeals.push(newMeal);
+    this.parentNewMealForm = false;
   }
 
-  addMeal(name, details, calories){
-    var newMeal = new Meal(name, details, calories);
-    this.parentMeals.push(newMeal);
-    this.newMealForm = false;
+  showNewMealForm(){
+    console.log('hi there');
+    this.parentNewMealForm = true;
   }
 
   selectMeal(meal){
@@ -34,9 +33,5 @@ export class AppComponent {
 
   closeEditForm(){
     this.selectedMeal = null;
-  }
-
-  onChange(optionFromMenu) {
-    this.filterByCaloricity = optionFromMenu;
   }
 }
