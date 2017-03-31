@@ -20,6 +20,10 @@
       "styles": [
         "styles.css"
       ],
+      "styles": [
+        "styles.css",
+        "../bower_components/bootstrap/dist/css/bootstrap.css"
+      ],
       "scripts": [],
       "environments": {
         "source": "environments/environment.ts",
