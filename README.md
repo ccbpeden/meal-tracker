@@ -22,7 +22,7 @@ You will need the following software properly installed on your computer.
 
 ## Installation
 
-* `git clone <repository-url>` this repository
+* `git clone https://github.com/ccbpeden/meal-tracker.git` this repository
 * `cd meal-tracker`
 * `npm install`
 * `bower install`
